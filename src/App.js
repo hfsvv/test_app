@@ -14,14 +14,15 @@ function App() {
   return (
     <div className="App">
      <NavBar/>
-       <BrowserRouter>
+     <Home />
+       {/* <BrowserRouter>
      <Suspense fallback={<div className="container">Loading...</div>}>
      <Routes>
 					<Route path="home" element={<Home />} />
 					<Route path="*" element={<NoMatch />} />
 				</Routes>
      </Suspense>  
-     </BrowserRouter>
+     </BrowserRouter> */}
 
     </div>
   );
