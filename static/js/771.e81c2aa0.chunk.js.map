@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/771.e81c2aa0.chunk.js","mappings":"gJAEA,MAMA,EANgBA,KAEZC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,W","sources":["pages/nomatch.jsx"],"sourcesContent":["import React from 'react'\r\n\r\nconst NoMatch = () => {\r\n  return (\r\n    <div>NoMatch</div>\r\n  )\r\n}\r\n\r\nexport default NoMatch"],"names":["NoMatch","_jsx","children"],"sourceRoot":""}
