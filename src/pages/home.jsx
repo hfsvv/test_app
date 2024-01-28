@@ -6,6 +6,7 @@ import Aboutus from './aboutus';
 import Counters from '../components/counters';
 import Form from './form';
 import Footer from './footer';
+import Services from './services';
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
 
     <Container>
         <div className="row">
+          <Services/>
            <Aboutus/>
            <Counters/>
            <Form/>

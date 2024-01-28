@@ -128,3 +128,13 @@ form {
   background-size: 100% 100%;
   transform: translateY(-0.15em);
 }
+.card-title{
+  text-align: center;
+}
+.card-outer{
+  border: 2px solid #ff923c !important;
+  border-radius: '6px' !important
+}
+.card {
+  border: none !important;
+}

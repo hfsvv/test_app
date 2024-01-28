@@ -11,7 +11,7 @@ const Counters = () => {
     <Container>
       <div className="row py-4">
         <div className="col-md-4 col-12">
-          <div className="card-outer">
+          <div className="card-outers">
             <div className="icon">
               <FontAwesomeIcon icon={faPerson} size="3x"  />
 
@@ -25,7 +25,7 @@ const Counters = () => {
           </div>
         </div>
         <div className="col-md-4 col-12">
-          <div className="card-outer">
+          <div className="card-outers">
             <div className="icon">
               <FontAwesomeIcon icon={faPerson} size="3x"  />
 
@@ -39,7 +39,7 @@ const Counters = () => {
           </div>
         </div>
         <div className="col-md-4 col-12">
-          <div className="card-outer">
+          <div className="card-outers">
             <div className="icon">
               <FontAwesomeIcon icon={faPerson} size="3x"  />
 
