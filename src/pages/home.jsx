@@ -17,8 +17,8 @@ const Home = () => {
 
     <Container>
         <div className="row">
-          <Services/>
            <Aboutus/>
+          <Services/>
            <Counters/>
            <Form/>
            <Footer/>

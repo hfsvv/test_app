@@ -3,6 +3,7 @@
 }
 .card-outer{
     text-align: center;
+    height :420px
 }
 .count{
     font-size: 50px;
@@ -137,4 +138,69 @@ form {
 }
 .card {
   border: none !important;
+}
+.container-fluid{
+  background-color: #ff923c;
+  color: #212529;
+  top :0;
+  height: 30px;
+  z-index: 200000;
+  position: sticky;
+
+}
+
+div , nav { 
+  background-color: #212529;
+  color: #f2f6f8;
+}
+.carousel-indicators{
+  display: none !important;
+}
+.card-body{
+  color: #f2f6f8 !important; 
+}
+.card{
+  background-color: #212529 !important;
+}
+.sticky-top{
+  top:30px !important
+}
+.card-outers{
+  text-align: center;
+}
+.counter div{
+  color: #ff923c;
+}
+
+h1,h2,h3{
+  text-decoration: underline;
+  text-decoration-color: #ff923c;
+}
+.container-fluid div{
+  background-color: #ff923c;
+}
+.container-data{
+  display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.container-data a{
+  color: #f2f6f8 !important;
+  text-decoration: none;
+}
+.nav-head{
+  color: #ff923c !important;
+  font-weight: bold;
+}
+.footer{
+  border-top: solid 1px #ff923c;
+}
+.brand-icons{
+  display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+.card img{
+  height: 250px;
 }
