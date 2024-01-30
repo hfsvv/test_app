@@ -1,7 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
-import image1  from '../assets/pexels-alex-green-5699475.jpg'
-import image2  from '../assets/pexels-edmond-dantès-4344860.jpg'
-import image3  from '../assets/pexels-polina-zimmerman-3747455.jpg'
+import image1  from '../assets/wallpaer1.jpg'
+import image2  from '../assets/wallpaper2.jpg'
+import image3  from '../assets/wallpaper3.jpg'
 
 function Carousal() {
   return (
