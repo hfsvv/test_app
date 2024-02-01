@@ -1,19 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { faPerson } from '@fortawesome/free-solid-svg-icons'
 
-const Form = () => {
+const Form = ({childRef}) => {
+	
+	const [body, setBody] = useState({
+		"name":"a",
+		"email":"s",
+		"message":"d"
+	})
+
+	const handleChange =(e)=>{
+		console.log(e.target.name);
+		const key = e.target.name
+		const value = e.target.value
+		console.log(key,value);
+		e.preventDefault()
+		setBody(prev => ({
+			...prev,
+			[key]:value
+		}))
+	}
+	const handleSubmit = (e)=>{
+		e.preventDefault()
+		console.log(body);
+	}
   return (
     <>
     <div class="container">
         <div className="row">
 
         
-	<h1 class="title text-center mb-4">Talk to Us</h1>
+	<h1 class="title text-center mb-4" ref={childRef} >Talk to Us</h1>
 
-	<div className="col-md-4 col-12">
+	<div className="col-md-4 col-12" >
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 790 563" fill="none" width="100%">
 			<g id="Image">
 					<g id="g14">
@@ -314,14 +334,14 @@ const Form = () => {
 
 	</div>
     <div className="col-md-8 col-12">
-	<form>
+	<form onSubmit={handleSubmit} >
 		
 			{/* <!-- Name --> */}
 			<div class="form-group position-relative my-2">
 				<label for="formName" class="d-block">
                 <i class="icon" data-feather="mail"></i>
 				</label>
-				<input type="text" id="formName" class="form-control form-control-lg thick" placeholder="Name"/>
+				<input type="text" onChange={handleChange} name="name" value={body.name} id="formName" class="form-control form-control-lg thick" placeholder="Name"/>
 			</div>
 
 			{/* <!-- E-mail --> */}
@@ -329,12 +349,12 @@ const Form = () => {
 				<label for="formEmail" class="d-block">
 					<i class="icon" data-feather="mail"></i>
 				</label>
-				<input type="email" id="formEmail" class="form-control form-control-lg thick" placeholder="E-mail"/>
+				<input type="email" name ="email" onChange={handleChange} value={body.email} id="formEmail" class="form-control form-control-lg thick" placeholder="E-mail"/>
 			</div>
 
 			{/* <!-- Message --> */}
 			<div class="form-group message my-2">
-				<textarea id="formMessage" class="form-control form-control-lg" rows="7" placeholder="Message"></textarea>
+				<textarea name="message" id="formMessage" onChange={handleChange} value={body.message} class="form-control form-control-lg" rows="7" placeholder="Message"></textarea>
 			</div>
 		
 			{/* <!-- Submit btn --> */}

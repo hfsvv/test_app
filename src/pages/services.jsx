@@ -6,13 +6,12 @@ import image5  from '../assets/image-2.jpg'
 import image6  from '../assets/image-3.jpg'
 import image7  from '../assets/image-4.jpg'
 import image8  from '../assets/image-5.jpg'
-import image9  from '../assets/image-6.jpg'
 
 
 
 
 
-const Services = () => {
+const Services = ({childRef}) => {
     const data = [
         {
             "image":image3,
@@ -48,7 +47,7 @@ const Services = () => {
         <div className="container">
 
             <div className="row my-4">
-                    <h3 className='text-center'>Our Services</h3>
+                    <h3 className='text-center' ref={childRef}>Our Services</h3>
                     {data.map(res =>{
                        return (<Cards image = {res.image}  heading = {res.heading} content = {res.content}  />)})}
                {/* <Cards image = {image3} heading = {}/> */}

@@ -1,5 +1,5 @@
 .carousal-image{
-    max-height: 75vh;
+    max-height: 60vh;
 }
 .card-outer{
     text-align: center;
@@ -203,4 +203,7 @@ h1,h2,h3{
 }
 .card img{
   height: 250px;
+}
+.nav-link{
+  color: #ff923c !important;
 }

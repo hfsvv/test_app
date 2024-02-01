@@ -10,8 +10,9 @@ const Footer = () => {
             <h5>Baitullah Projects Services</h5>
             <div className="address-details">
               <p>
-                Office 702  Technique Building <br />
-                P.O 55743 <br />
+                Office 702  Technique Building, <br />
+                P.O 55743, <br />
+                Salah Al Din, <br />
                 Dubai, United Arab Emirates <br />
               </p>
             </div>

@@ -1,11 +1,11 @@
 import React from 'react'
 import Container from 'react-bootstrap/esm/Container'
 
-const Aboutus = () => {
+const Aboutus = ({childRef}) => {
   return (
-    <Container>
+    <Container ref={childRef}>
         <div className="row py-4">
-            <h3 className='text-center'>About Us</h3>
+            <h3 className='text-center' >About Us</h3>
             <div className="col-md-6 my-4">
 
                 <h4 className='py-3'>Our Commitment to Excellence</h4>

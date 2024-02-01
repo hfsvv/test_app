@@ -3,10 +3,21 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { faPhone,faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
-const NavBar = () => {
+const NavBar = ({scrollCall ,scrollService,scrollAboutUs}) => {
+  const scrollToContact = () =>{
+    console.log("works");
+    scrollCall()
+  }
+  const serviceScroll= ()=>{
+    scrollService()
+  }
+  const abouUsScroll= ()=>{
+    scrollAboutUs()
+  }
+  
+
 	return (
     <>
     <div className="container-fluid">
@@ -35,9 +46,9 @@ const NavBar = () => {
            
           </Nav>
           <Nav>
-		  <Nav.Link href="#features">About Us</Nav.Link>
-            <Nav.Link href="#pricing">Services</Nav.Link>
-            <Nav.Link href="#pricing">Contact Us</Nav.Link>
+		  <Nav.Link onClick={abouUsScroll}>About Us</Nav.Link>
+            <Nav.Link onClick={serviceScroll}>Services</Nav.Link>
+            <Nav.Link onClick={scrollToContact}>Contact Us</Nav.Link>
 
             {/* <NavDropdown title="Projects" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">abc</NavDropdown.Item>

@@ -1,28 +1,52 @@
 import { Routes, Route ,BrowserRouter } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useRef } from 'react';
 import './App.css';
-// import Navbar from './components/navbar';
 import Home from './pages/home';
 import NavBar from './components/navbar';
 
-// const Home = lazy(()=> import('./pages/home'))
 const NoMatch = lazy(()=> import('./pages/nomatch'))
 
 
 
 function App() {
-  return (
+  const refs = useRef(null)
+  const serviceRef = useRef(null)
+  const aboutUsRef = useRef(null)
+  const scrollCallContactUs = ()=>{
+    console.log("work222");
+    console.log(refs);
+    refs.current.scrollIntoView({
+      block:"start",
+      behavior: 'smooth'
+    })
+  }
+  const scrollService = () =>{
+    serviceRef.current.scrollIntoView(
+      {
+        block:"center",
+        behavior: 'smooth'
+      }
+    )
+  }
+  const scrollAboutUs = () =>{
+    aboutUsRef.current.scrollIntoView({
+      block:"center",
+      behavior: 'smooth'
+    })
+  }
+  return (  
     <div className="App">
-     <NavBar/>
-     <Home />
-       {/* <BrowserRouter>
+     <NavBar scrollCall={scrollCallContactUs} scrollService={scrollService} scrollAboutUs = {scrollAboutUs}/>
+     {/* <Home 
+     /> */}
+       <BrowserRouter>
      <Suspense fallback={<div className="container">Loading...</div>}>
      <Routes>
-					<Route path="home" element={<Home />} />
+					<Route path="" element={<Home childRef = {refs} serviceRef = {serviceRef} aboutUsRef ={aboutUsRef} />} />
 					<Route path="*" element={<NoMatch />} />
 				</Routes>
      </Suspense>  
-     </BrowserRouter> */}
+     </BrowserRouter>
 
     </div>
   );
