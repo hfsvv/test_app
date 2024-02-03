@@ -29,8 +29,8 @@ const NavBar = ({scrollCall ,scrollService,scrollAboutUs}) => {
         </div>
         <div>
         <FontAwesomeIcon icon={faEnvelope} />
-        <a className='px-1' href="mailto:aliasarwar44@gmail.com">
-          aliasarwar44@gmail.com
+        <a className='px-1' href="mailto:contact@baitullahprojects.com">
+        contact@baitullahprojects.com
           </a>
         </div>
         <div>

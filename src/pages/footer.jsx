@@ -33,7 +33,7 @@ const Footer = () => {
         <div class="col-md-12">
           <footer class="py-2 footer">
 
-            <p class="text-center "> Copyright © 2022 Bistullah Project Services</p>
+            <p class="text-center "> Copyright © 2022 Baitullah Projects Services</p>
           </footer>
         </div>
       </div>

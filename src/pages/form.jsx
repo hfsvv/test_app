@@ -3,13 +3,17 @@ import React, { useState } from 'react'
 
 
 const Form = ({childRef}) => {
+
+
 	
 	const [body, setBody] = useState({
-		"name":"a",
-		"email":"s",
-		"message":"d"
+		"name":"",
+		"email":"",
+		"message":""
 	})
 
+	
+	
 	const handleChange =(e)=>{
 		console.log(e.target.name);
 		const key = e.target.name
@@ -20,10 +24,12 @@ const Form = ({childRef}) => {
 			...prev,
 			[key]:value
 		}))
+		
 	}
 	const handleSubmit = (e)=>{
 		e.preventDefault()
 		console.log(body);
+		
 	}
   return (
     <>
