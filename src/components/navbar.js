@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { faPhone,faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import logo from '../assets/logo.png'
 
 const NavBar = ({scrollCall ,scrollService,scrollAboutUs}) => {
   const scrollToContact = () =>{
@@ -22,11 +23,11 @@ const NavBar = ({scrollCall ,scrollService,scrollAboutUs}) => {
     <>
     <div className="container-fluid">
       <div className="container-data">
-        <div>
+        {/* <div>
     <FontAwesomeIcon icon={faPhone} />
     <a className='px-1' href="tel:042503526">042503526</a>
 
-        </div>
+        </div> */}
         <div>
         <FontAwesomeIcon icon={faEnvelope} />
         <a className='px-1' href="mailto:contact@baitullahprojects.com">
@@ -39,7 +40,9 @@ const NavBar = ({scrollCall ,scrollService,scrollAboutUs}) => {
     </div>
 		<Navbar collapseOnSelect expand="lg"  variant="dark"  sticky="top">
       <Container>
-        <Navbar.Brand className='nav-head' href="#home">Baitullah Projects</Navbar.Brand>
+        <Navbar.Brand className='nav-head' href="#home">
+          <img src={logo} alt=""  height={60} />
+          Baitullah Projects</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

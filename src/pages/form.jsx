@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
-
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 
 const Form = ({childRef}) => {
 
+	const service_id = process.env.REACT_APP_SERVICE_ID
+	const template_id = process.env.REACT_APP_TEMPLATE_ID
+	const public_key = process.env.REACT_APP_PUBLIC_KEY
 
 	
 	const [body, setBody] = useState({
@@ -11,14 +15,13 @@ const Form = ({childRef}) => {
 		"email":"",
 		"message":""
 	})
-
+	const [isDisable,setIsDisable] = useState(false)
 	
 	
 	const handleChange =(e)=>{
-		console.log(e.target.name);
+ 
 		const key = e.target.name
 		const value = e.target.value
-		console.log(key,value);
 		e.preventDefault()
 		setBody(prev => ({
 			...prev,
@@ -29,6 +32,23 @@ const Form = ({childRef}) => {
 	const handleSubmit = (e)=>{
 		e.preventDefault()
 		console.log(body);
+		setIsDisable(true)
+		emailjs.send(service_id,template_id,body,public_key).then((res)=>{
+				console.log("success");
+				console.log(res);
+				toast.success("Enquiry Submitted")
+				setBody({
+					"name":"",
+				"email":"",
+				"message":""
+				})
+
+			}).catch((error)=>{
+				setIsDisable(false)
+				console.log(error);
+				toast.warning("Unexpected error occurred !")
+			});
+		
 		
 	}
   return (
@@ -347,7 +367,7 @@ const Form = ({childRef}) => {
 				<label for="formName" class="d-block">
                 <i class="icon" data-feather="mail"></i>
 				</label>
-				<input type="text" onChange={handleChange} name="name" value={body.name} id="formName" class="form-control form-control-lg thick" placeholder="Name"/>
+				<input type="text" required minLength={2} onChange={handleChange} name="name" maxLength={40} value={body.name} id="formName" class="form-control form-control-lg thick" placeholder="Name"/>
 			</div>
 
 			{/* <!-- E-mail --> */}
@@ -360,13 +380,14 @@ const Form = ({childRef}) => {
 
 			{/* <!-- Message --> */}
 			<div class="form-group message my-2">
-				<textarea name="message" id="formMessage" onChange={handleChange} value={body.message} class="form-control form-control-lg" rows="7" placeholder="Message"></textarea>
+				<textarea name="message" id="formMessage" required minLength={3} maxLength={100} onChange={handleChange} value={body.message} class="form-control form-control-lg" rows="7" placeholder="Message"></textarea>
 			</div>
 		
 			{/* <!-- Submit btn --> */}
 			<div class="text-center my-2">
-				<button type="submit" class="btn btn-primary" tabIndex="-1">Send message</button>
+				<button type="submit" disabled={isDisable} class="btn btn-primary" tabIndex="-1">Send message</button>
 			</div>
+			
 	</form>
     </div>
 	</div>

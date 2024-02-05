@@ -207,3 +207,12 @@ h1,h2,h3{
 .nav-link{
   color: #ff923c !important;
 }
+.toastBody , .Toastify__toast-theme--light{
+  background-color:  #212529!important;
+}
+.Toastify__toast-body{
+  height: 10px !important;
+}
+.Toastify__close-button > svg {
+  color: #f2f6f8 !important;
+}

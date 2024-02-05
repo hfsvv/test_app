@@ -3,12 +3,15 @@ import { lazy, Suspense, useRef } from 'react';
 import './App.css';
 import Home from './pages/home';
 import NavBar from './components/navbar';
+import {  ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const NoMatch = lazy(()=> import('./pages/nomatch'))
 
 
 
 function App() {
+ 
   const refs = useRef(null)
   const serviceRef = useRef(null)
   const aboutUsRef = useRef(null)
@@ -47,6 +50,7 @@ function App() {
 				</Routes>
      </Suspense>  
      </BrowserRouter>
+     <ToastContainer />
 
     </div>
   );
