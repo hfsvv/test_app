@@ -189,9 +189,9 @@ h1,h2,h3{
   color: #f2f6f8 !important;
   text-decoration: none;
 }
-.nav-head{
+.nav-head , .nav-link{
   color: #ff923c !important;
-  font-weight: bold;
+  font-weight: 700 !important;
 }
 .footer{
   border-top: solid 1px #ff923c;
@@ -203,6 +203,7 @@ h1,h2,h3{
 }
 .card img{
   height: 250px;
+  
 }
 .nav-link{
   color: #ff923c !important;
@@ -215,4 +216,7 @@ h1,h2,h3{
 }
 .Toastify__close-button > svg {
   color: #f2f6f8 !important;
+}
+.navbar-container , nav , .navbar-collapse , .navbar-nav{
+  background-color:  #f2f6f8 !important;
 }

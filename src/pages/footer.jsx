@@ -11,6 +11,7 @@ const Footer = () => {
             <div className="address-details">
               <p>
                 Office 702  Technique Building, <br />
+                4th floor, <br />
                 P.O 55743, <br />
                 Salah Al Din, <br />
                 Dubai, United Arab Emirates <br />

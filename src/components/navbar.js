@@ -39,9 +39,9 @@ const NavBar = ({scrollCall ,scrollService,scrollAboutUs}) => {
       </div>
     </div>
 		<Navbar collapseOnSelect expand="lg"  variant="dark"  sticky="top">
-      <Container>
+      <Container className="navbar-container">
         <Navbar.Brand className='nav-head' href="#home">
-          <img src={logo} alt=""  height={60} />
+          <img className='logo' src={logo} alt=""  height={60} />
           Baitullah Projects</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
